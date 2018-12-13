@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include header %>
+<style>
+    .file{
+        margin-top: 130px;
+    }
+    form {
+        margin-bottom: 540px;
+    }
+</style>
+<body>
+<% include navbar %>
+<div class="container">
+    <hr>
+    <hr>
+    <div class="form-group file">
+        <form action="/signtext" method="POST" enctype='application/json' >
+          <div class="row">
+            <div class="col-md-4"></div>
+            <div class="form-group col-md-4">
+              <label for="">Text Sign:</label>
+              <input type="text" class="form-control" name="sign">
+            </div>
+          </div>
+  
+          <div class="row">
+            <div class="col-md-4"></div>
+            <div class="form-group col-md-4">
+              <button type="submit" class="btn btn-success">Send</button>
+            </div>
+          </div>
+        </form>
+  
+    
+    </div>
+    
+    
+    </div>
+    <% include footer %>
+</body>
+</html>

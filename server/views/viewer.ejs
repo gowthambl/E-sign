@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include header %>
+<style>
+    .row {
+        margin-top: 40px;
+        padding: 0 10px;
+        height:68vh;
+    }
+
+    .clickable {
+        cursor: pointer;
+    }
+
+    .panel-heading div {
+        margin-top: -18px;
+        font-size: 15px;
+    }
+
+    .panel-heading div span {
+        margin-left: 5px;
+    }
+    .panel {
+        overflow: auto;
+    }
+</style>
+<body>
+<% include navbar %>
+<hr>
+<div class="container">
+    <div class="page-header">
+        <%= name %>
+    </div>
+    <div class="row" id="pdf">
+
+    </div>
+</div>
+<% include footer %>
+<!-- /container -->
+<script>
+    PDFObject.embed("/files/<%= data %>", "#pdf");</script>
+</body>
+</html>
